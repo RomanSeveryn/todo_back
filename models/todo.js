@@ -12,6 +12,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         type: DataTypes.STRING,
         validate: {
+          isAlphanumeric: true,
           notNull: true,
           notEmpty: true,
         },
@@ -35,7 +36,7 @@ module.exports = (sequelize, DataTypes) => {
     {
       sequelize,
       modelName: 'Todo',
-      tableName: 'todo',
+      tableName: 'todos',
       underscored: true,
     }
   );
