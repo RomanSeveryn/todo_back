@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
         validate: {
           isDate: true,
           isValidDate (value) {
-            if (isAfter(new Date(value), new Date())) {
+            if (isAfter(new Date(), new Date(value))) {
               throw new Error('Please, check day');
             }
           },
