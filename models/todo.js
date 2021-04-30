@@ -19,14 +19,6 @@ module.exports = (sequelize, DataTypes) => {
       },
       deadline: {
         type: DataTypes.DATEONLY,
-        validate: {
-          isDate: true,
-          isValidDate (value) {
-            if (isAfter(new Date(), new Date(value))) {
-              throw new Error('Please, check day');
-            }
-          },
-        },
       },
       isDone: {
         field: 'is_done',

@@ -49,7 +49,7 @@ module.exports.deleteTask = async (req, res, next) => {
 
     const rowsCount = await Todo.destroy({ where: { id: id } });
 
-    res.send({ data: 'Deleted' });
+    res.send({ data: id });
   } catch (err) {
     next(err);
   }
